@@ -1,0 +1,17 @@
+#Preguntar por la nota del examen
+exam_score = float(input("Puntuación del examen75: "))
+
+#Preguntar por las clases totales
+total_classes = int(input("Total de clases: "))
+
+#Preguntar por las clases asistidas
+attended_classes = int(input("Clases asistidas: "))
+
+#Calcular el porcentaje
+attendance_percentage = (attended_classes / total_classes) * 100
+
+#Comprobación
+if exam_score >= 70 and attendance_percentage >= 80:
+    print("Aprueba")
+else:
+    print("Suspenso")
