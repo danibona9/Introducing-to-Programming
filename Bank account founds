@@ -1,0 +1,28 @@
+class BankAccount:
+    def __init__(self, account_number):
+        self.account_number = account_number
+        self.balance = 0
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+        else:
+            print("Fondos insuficientes.")
+
+    def get_balance(self):
+        return self.balance
+
+
+account_number = input("Número de cuenta: ")
+account = BankAccount(account_number)
+
+amount = float(input("Cantidad a depositar: "))
+account.deposit(amount)
+
+amount = float(input("Cantidad a retirar: "))
+account.withdraw(amount)
+
+print(f"Saldo actual: ${account.get_balance():.2f}")
