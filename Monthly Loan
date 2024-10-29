@@ -1,0 +1,16 @@
+#First steps
+money = 250000  #Initial quantity
+annual = 5  #Interest
+years = 30  #Loan term
+
+#Convert annual interest rate to monthly interest rate
+m_rate = (annual / 100) / 12
+
+#Convert loan term in years to loan term in months
+n = years * 12
+
+#Monthly payment formula
+M = money * (m_rate * (1 + m_rate) ** n) / ((1 + m_rate) ** n - 1)
+
+#Display the monthly payment
+print(f"The monthly payment for the loan is: €{M:.2f}")
