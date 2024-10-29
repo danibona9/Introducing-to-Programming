@@ -1,0 +1,19 @@
+#Primer paso
+if __name__ == "__main__":
+    simple_chatbot()
+
+def simple_chatbot():
+
+    #Nombre
+    name = input("¡Hola! ¿Cuál es tu nombre? ")
+
+    #Nacimiento
+    dob = input("Genial, ¿cuál es tu fecha de nacimiento? (YYYY-MM-DD) ")
+
+    #Hobbies
+    hobbies = input("¿Cuáles son tus pasatiempos?")
+
+    print("\n¡Gracias por compartir tu información!")
+    print(f"Nombre: {name}")
+    print(f"Fecha de nacimiento: {dob}")
+    print(f"Pasatiempos: {hobbies}")
