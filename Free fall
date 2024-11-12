@@ -1,0 +1,17 @@
+import numpy as np
+
+initial_height = 50  
+gravity = 9.8  
+
+total_time_to_ground = np.sqrt(2 * initial_height / gravity)  
+time_steps = 100 
+time_array = np.linspace(0, total_time_to_ground, time_steps) 
+
+positions = initial_height - 0.5 * gravity * time_array**2
+
+distances = np.diff(positions)
+average_distance_per_interval = np.mean(np.abs(distances))
+
+
+print("Time to hit the ground:", total_time_to_ground, "seconds")
+print("Average distance fallen per interval:", average_distance_per_interval, "meters")
